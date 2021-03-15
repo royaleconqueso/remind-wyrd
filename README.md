@@ -1,7 +1,7 @@
 # Installation
 
-Download the file and place in your ~/.nano directory. Then run:
+Download the file and place in your ~/.nano directory. Then put:
 
-``echo "INCLUDE \"~/.nano/remind.nanorc >> ~/.nanorc\""``
+``include "~/.nano/remind.nanorc" ``
 
-That's it.
+toward the end of your ~/.nanorc file. That's it.
