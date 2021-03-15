@@ -1,0 +1,31 @@
+## Here is a short syntax highting file for the remind calendar and alarm program to use in the nano editor.
+## https://github.com/royaleconqueso/remind-wyrd
+## 
+## https://dianne.skoll.ca/projects/remind/
+## Remind is Free Software, licensed under the terms of the GNU General Public License, Version 2 
+## https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html#SEC1
+
+syntax "remind" "\.reminders" "reminders" "\.reminders$"
+#magic "(La)?TeX document"
+comment "#"
+
+#linter chktex -v0 -q -I
+
+color red "\s+at+\s"
+color red "[0-9]+:[0-9][0-9]"
+color magenta "\s([1-9]|[1-2][0-9]|30|31)\s"
+color magenta "20?[0-9]?[0-9]"
+#color magenta "(^|\s)\*(.*?)\*(\s|$)\b([1-9]|[1-2][0-9]|30|31)\b(^|\s)\*(.*?)\*(\s|$)"
+color yellow "rem|REM"
+color yellow "(ONCE|PRIORITY|SKIP|BEFORE|AFTER|OMIT|OMITFUNC|AT|SCHED|WARN|UNTIL|THROUGH|SCANFROM|FROM|DURATION|TAG|MSG|MSF|RUN|CAL|SATISFY|SPECIAL|PS|PSFILE)"
+color yellow "(msg|duration|once|skip|from)"
+#color yellow "(ONCE|PRIORITY|SKIP|BEFORE|AFTER|OMIT|OMITFUNC|AT|SCHED|WARN|UNTIL|THROUGH|SCANFROM|FROM|DURATION|TAG|MSG|MSF|RUN|CAL|SATISFY|SPECIAL|PS|PSFILE)"
+color magenta "(jan|feb|mar|apr|may|jun|june|jul|aug|sep|sept|oct|nov|dec)"
+color magenta "(JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)"
+color magenta "(january|february|march|april|may|june|july|august|september|october|november|december)"
+color magenta "(JAN|FEB|MAR|APR|MAY|JUN|JUNE|JUL|AUG|SEP|SEPT|OCT|NOV|DEC)"
+color magenta "(Jan|Feb|Mar|Apr|April|May|Jun|June|Jul|Aug|Sep|Sept|Oct|Nov|Dec)"
+color white "remind|reminder"
+color blue ";.*"
+color blue "#.*"
+
